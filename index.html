@@ -22,7 +22,7 @@
 <body>
     <div class="container">
     <section id="generator">
-    <div class="page-header"><h1 id="title">Viprus Link QR Stickers</h1></div>
+    <div class="page-header"><h1 id="title">Viprus Link webQR for iOS</h1></div>
     <div id="history"></div>
     <form id="form">
         <div class="form-group has-feedback">
@@ -107,7 +107,6 @@
             printDocument.open();
             var qrimg = $('#qrcode canvas');
             var data = qrimg[0].toDataURL('image/png');
-            console.log(data);
             var head =
                 "<head>" +
                 "<style>img{height:30mm;width:30mm;} body{margin:0;} .to-print{height:210mm; width:297mm; } </style>" +
@@ -122,12 +121,12 @@
                     "</body>" +
                     "</html>");
             printPreview.document.close();
-            printPreview.onload= function(){try {
-              // Print for Safari browser
-              document.execCommand('print', false, null)
-            } catch {
-              window.print()
-            }};
+            printPreview.onload= function(){
+                printPreview.print();
+                printPreview.setTimeout(function () {
+                    $.xhrPool.abortAll()
+                }, 100);
+            };
             printPreview.onafterprint = function(){
             printPreview.close()
             };
