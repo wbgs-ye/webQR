@@ -122,7 +122,12 @@
                     "</body>" +
                     "</html>");
             printPreview.document.close();
-            printPreview.onload= function(){printPreview.print()};
+            printPreview.onload= function(){try {
+              // Print for Safari browser
+              document.execCommand('print', false, null)
+            } catch {
+              window.print()
+            }};
             printPreview.onafterprint = function(){
             printPreview.close()
             };
