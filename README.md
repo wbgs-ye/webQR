@@ -2,7 +2,7 @@
   <img src="https://viprus.co.uk/wp-content/uploads/2019/12/logo-high-res-240x300.png" height=80 width=80>
   <h3 align="center">webQR by Viprus</h3>
   <p align="center">
-    An intuitive, simple and powerful web app to generate Wifi QR Codes for the Viprus Link.
+    An intuitive web app to generate Wifi QR Codes for the Viprus Link.
     <br>
     <a href="https://qr.viprus.co.uk"><strong>Check it out &raquo;</strong></a>
   </p>
