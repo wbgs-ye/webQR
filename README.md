@@ -14,6 +14,7 @@ Welcome to webQR by Viprus. This repo contains the source behind our web app tha
 
 # Source
 webQR was built on <a href="https://github.com/qifi">Qifi</a>. QR code generation takes place on locally executed Javascript to ensure that the user's SSID and password are not transmitted over the network and exposed to any hosting servers.
-<hr>
+
 # License
 Expat/MIT License. See the `LICENSE` file for details.
+QR Code is a registered trademark of DENSO WAVE INCORPORATED in the United States and other countries.
